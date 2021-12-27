@@ -1,13 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 :root {
-  --indigo: #667EEA;
-  --dark-indigo: #5A67D8;
-  --darker-indigo: #4C51BF;
-  --gray: #C3C5C7;
-  --orange: #FF9E90;
+  --indigo: #667eea;
+  --dark-indigo: #5a67d8;
+  --darker-indigo: #4c51bf;
+  --gray: #c3c5c7;
+  --orange: #ff9e90;
   --black: #101820;
   --blackAlpha: #10182020;
-  --white: #FFFFFF;
-  --red: #EF6690;
+  --white: #ffffff;
+  --red: #ef6690;
 }
 
 .App {
@@ -15,13 +16,34 @@
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  font-family: "Outfit", sans-serif;
 }
-
+.App .text {
+  position: absolute;
+  z-index: 10;
+  top: 9rem;
+  left: 3rem;
+  right: 3rem;
+  line-height: 1;
+}
+.App h1 {
+  font-size: 20vh;
+  color: var(--white);
+  line-height: 0.9;
+text-transform: capitalize;
+font-weight: 500;
+}
+.App h4 {
+  font-size: 8vh;
+  line-height: 0.9;
+  color: var(--white);
+  font-weight: 200;
+}
 .App .icon path {
   fill: var(--white);
 }
 
-.App  .icon {
+.App .icon {
   margin: 2rem;
   width: 5rem;
   height: 5rem;
@@ -51,26 +73,26 @@ img {
 }
 
 .container:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   mix-blend-mode: darken;
-  background-color: #EF6690;
+  background-color: #ef6690;
   z-index: 1;
 }
 
 .container:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   mix-blend-mode: lighten;
-  background-color: #4C51BF;
+  background-color: #4c51bf;
   z-index: 1;
 }
 

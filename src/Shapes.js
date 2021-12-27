@@ -1,4 +1,4 @@
-const Shapes = () => {
+const Shapes = (color1, color2) => {
   function getRandomLength() {
     return Math.floor(Math.random() * 500 + 100);
   }
@@ -29,10 +29,10 @@ const Shapes = () => {
       <svg style={{ pointerEvents: 'none' }}>
         <defs>
           <linearGradient id="bggrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: '#EF6690' }} />
+            <stop offset="0%" style={{ stopColor: color1 || '#EF6690' }} />
             <stop
               offset="100%"
-              style={{ stopColor: '#FF9E90' }}
+              style={{ stopColor: color2 || '#FF9E90' }}
             />
           </linearGradient>
         </defs>

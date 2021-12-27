@@ -3,14 +3,18 @@ import 'minireset.css'
 import Shapes from './Shapes';
 import { ReactComponent as Icon } from './icon.svg'
 
-function App({ photo }) {
+function App({ photo, name, artist }) {
   return (
     <div className="App">
       <Icon />
       <div class="container">
+        <div class="text">
+          {name && <h1>{name}</h1>}
+          {artist && <h4>{artist}</h4>}
+        </div>
         {photo && <img alt="avatar" src={photo} />}
       </div>
-      <Shapes />
+      <Shapes color1="#fff" color2="#0ff" />
     </div>
   );
 }
@@ -18,5 +22,7 @@ function App({ photo }) {
 export default App;
 
 App.defaultProps = {
-  photo: 'https://images.unsplash.com/photo-1620589025695-d6a796305be5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3034&q=80',
-}
+  name: "front left long title",
+  artist: "sfdafds afdsfasd fsadf sadf dasfda",
+  photo: "https://source.unsplash.com/1000x1000/",
+};
