@@ -1,4 +1,11 @@
-const Shapes = (color1, color2) => {
+const Shapes = ({ random, color1, color2 }) => {
+  if (random) { 
+    color1 = getRandomColor();
+    color2 = getRandomColor();
+  }
+  function getRandomColor() { 
+    return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  }
   function getRandomLength() {
     return Math.floor(Math.random() * 500 + 100);
   }

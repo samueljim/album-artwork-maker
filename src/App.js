@@ -14,7 +14,7 @@ function App({ photo, name, artist }) {
         </div>
         {photo && <img alt="avatar" src={photo} />}
       </div>
-      <Shapes color1="#fff" color2="#0ff" />
+      <Shapes random/>
     </div>
   );
 }
