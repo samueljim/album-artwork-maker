@@ -1,0 +1,115 @@
+:root {
+  --indigo: #667EEA;
+  --dark-indigo: #5A67D8;
+  --darker-indigo: #4C51BF;
+  --gray: #C3C5C7;
+  --orange: #FF9E90;
+  --black: #101820;
+  --blackAlpha: #10182020;
+  --white: #FFFFFF;
+  --red: #EF6690;
+}
+
+.App {
+  background-color: var(--indigo);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.App .icon path {
+  fill: var(--white);
+}
+
+.App  .icon {
+  margin: 2rem;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(1) brightness(0.6);
+  width: 100%;
+  height: 100% !important;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: darken;
+  background-color: #EF6690;
+  z-index: 1;
+}
+
+.container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: lighten;
+  background-color: #4C51BF;
+  z-index: 1;
+}
+
+.shape-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.svg-shapes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  width: 100%;
+  height: 100% !important;
+}
+
+.svg-shapes circle {
+  fill: transparent;
+  stroke: url(#bggrad);
+  stroke-linecap: round;
+  animation: bgmove 200s linear infinite;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+
+@keyframes bgmove {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
