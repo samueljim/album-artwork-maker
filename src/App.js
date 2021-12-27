@@ -3,7 +3,7 @@ import 'minireset.css'
 import Shapes from './Shapes';
 import { ReactComponent as Icon } from './icon.svg'
 import { useState, useEffect } from 'react';
-function App({ name, artist }) {
+function App({ album, artist }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
 
@@ -24,10 +24,10 @@ function App({ name, artist }) {
       <div className="container">
         <div className="border">
           <div className="text">
-            {name && (
+            {album && (
               <h1>
                 <outfit-limiter textfit max-lines="3">
-                  {name}
+                  {album}
                 </outfit-limiter>
               </h1>
             )}
@@ -53,6 +53,6 @@ function App({ name, artist }) {
 export default App;
 
 App.defaultProps = {
-  name: "front left",
+  album: "front left",
   artist: "spotify",
 };
