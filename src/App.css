@@ -41,6 +41,7 @@
   font-weight: 500;
   letter-spacing: -2.7px;
   margin-bottom: 1rem;
+  word-break: break-word;
 }
 .App h4 {
   font-size: 5vh;
@@ -100,6 +101,7 @@ img {
   right: 0;
   bottom: 0;
   mix-blend-mode: darken;
+  opacity: 0.5;
   background-color: #ef6690;
   z-index: 1;
 }
@@ -113,6 +115,7 @@ img {
   bottom: 0;
   mix-blend-mode: lighten;
   background-color: #4c51bf;
+  opacity: 0.5;
   z-index: 1;
 }
 

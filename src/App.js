@@ -53,6 +53,5 @@ function App({ album, artist }) {
 export default App;
 
 App.defaultProps = {
-  album: "front left",
-  artist: "spotify",
+  album: "it's "+ new Date().toLocaleDateString()
 };
