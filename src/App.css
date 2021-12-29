@@ -102,7 +102,7 @@ img {
   bottom: 0;
   mix-blend-mode: darken;
   opacity: 0.5;
-  background-color: #ef6690;
+  background-color: #ef6690;-webkit-mask-position-x: ;
   z-index: 1;
 }
 
